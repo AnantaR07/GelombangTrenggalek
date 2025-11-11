@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Pantai Taman Kili-Kili — Explore Trenggalek</title>
+    <link
+      rel="icon"
+      type="image/png"
+      href="./assests/img/Gelombang-laut.png"
+      sizes="32x32"
+    />
+    <meta
+      name="description"
+      content="Informasi lengkap tentang Pantai Taman Kili-Kili — pantai konservasi penyu di Trenggalek dengan suasana alami, pasir keemasan, dan ombak khas laut selatan."
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+      /* 
+    Membuat animasi "slideDown" 
+    Efek: elemen muncul dari atas ke bawah dengan transisi halus
+  */
+      @keyframes slideDown {
+        0% {
+          opacity: 0; /* Awal: elemen transparan */
+          transform: translateY(-10px); /* Sedikit bergeser ke atas */
+        }
+        100% {
+          opacity: 1; /* Akhir: elemen terlihat penuh */
+          transform: translateY(0); /* Kembali ke posisi normal */
+        }
+      }
+
+      /* 
+    Class ini akan memicu animasi "slideDown" 
+    saat ditambahkan ke elemen.
+  */
+      .animate-slide-down {
+        animation: slideDown 0.35s ease forwards; /* Durasi 0.35 detik, transisi halus */
+      }
+
+      /* 
+    Tambahan gaya (style) khusus untuk mode mobile
+    Menyesuaikan ukuran teks dan jarak antar-elemen 
+    agar tampilan lebih rapi di layar kecil
+  */
+      @media (max-width: 640px) {
+        h1,
+        h2 {
+          line-height: 1.3; /* Mengatur jarak antar-baris teks agar tidak terlalu rapat */
+        }
+        .text-2xl {
+          font-size: 1.3rem; /* Mengecilkan ukuran font untuk teks besar */
+        }
+        .text-3xl {
+          font-size: 1.6rem; /* Ukuran sedikit lebih besar dari 2xl */
+        }
+        section {
+          margin-bottom: 2rem; /* Menambah jarak antar bagian (section) */
+        }
+      }
+    </style>
+  </head>
+  <body class="bg-gradient-to-b from-sky-50 to-white text-slate-800">
+    <!-- NAVBAR -->
+    <header
+      class="sticky top-0 z-50 backdrop-blur bg-white/70 border-b border-slate-200"
+    >
+      <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex items-center justify-between h-16">
+          <div class="flex items-center gap-3">
+            <div
+              class="w-10 h-10 rounded-xl bg-white border-2 border-blue-500 flex items-center justify-center shadow-md"
+            >
+              <img
+                src="./assests/img/Gelombang-laut.png"
+                alt="Logo Gelombang Laut"
+                class="w-6 h-6"
+              />
+            </div>
+            <div>
+              <a
+                href="index.html"
+                class="text-lg font-extrabold tracking-tight text-slate-800 hover:text-blue-600 transition"
+                >Gelombang Trenggalek</a
+              >
+              <div class="text-xs text-slate-500 -mt-0.5">
+                Wisata Pantai & Pesisir
+              </div>
+            </div>
+          </div>
+
+          <!-- Desktop Menu -->
+          <nav class="hidden md:flex items-center gap-6 text-sm">
+            <a href="index.html" class="hover:text-blue-400">Beranda</a>
+            <a href="tentang.html" class="hover:text-blue-400">Tentang</a>
+            <a href="kontak.html" class="hover:text-blue-400">Kontak</a>
+          </nav>
+
+          <!-- Mobile Menu Button -->
+          <div class="md:hidden">
+            <button
+              id="btnMenu"
+              class="p-2 rounded-md hover:bg-blue-50 transition"
+            >
+              <svg
+                id="iconMenu"
+                class="w-6 h-6"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  stroke-width="1.8"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M4 6h16M4 12h16M4 18h16"
+                ></path>
+              </svg>
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Mobile Dropdown -->
+      <div
+        id="mobileMenu"
+        class="md:hidden hidden border-t border-blue-100 bg-white shadow-md"
+      >
+        <div class="px-4 py-3 space-y-3 text-blue-600">
+          <a href="index.html" class="block hover:text-blue-400 transition"
+            >Beranda</a
+          >
+          <a href="tentang.html" class="block hover:text-blue-400 transition"
+            >Tentang</a
+          >
+          <a href="kontak.html" class="block hover:text-blue-400 transition"
+            >Kontak</a
+          >
+        </div>
+      </div>
+    </header>
+
+    <!-- KONTEN UTAMA -->
+    <main class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-10">
+      <!-- Judul -->
+      <section class="text-center mb-10">
+        <h1 class="text-3xl font-extrabold text-blue-700 mb-2">
+          Pantai Taman Kili-Kili
+        </h1>
+        <p class="text-slate-600 italic text-sm sm:text-base leading-relaxed">
+          Pantai konservasi penyu di Trenggalek yang menawarkan keindahan alam,
+          pasir lembut, dan suasana damai khas pesisir selatan.
+        </p>
+      </section>
+
+      <!-- Gambar -->
+      <section class="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-6 mb-10">
+        <img
+          src="./assests/img/PantaiTamanKili-Kili/PantaiTamanKili-Kili-1.jpg"
+          alt="Pantai Taman Kili-Kili"
+          class="rounded-2xl shadow-lg w-full h-64 sm:h-72 object-cover"
+        />
+        <img
+          src="./assests/img/PantaiTamanKili-Kili/PantaiTamanKili-Kili-2.jpg"
+          alt="Pantai Taman Kili-Kili"
+          class="rounded-2xl shadow-lg w-full h-64 sm:h-72 object-cover"
+        />
+      </section>
+
+      <!-- Deskripsi -->
+      <section id="deskripsi" class="mb-10">
+        <h2 class="text-2xl font-bold mb-3 text-blue-600">Deskripsi</h2>
+        <p
+          class="text-slate-700 leading-relaxed text-justify text-sm sm:text-base"
+        >
+          Pantai Taman Kili-Kili terletak di Desa Wonocoyo, Kecamatan Panggul,
+          Kabupaten Trenggalek, Jawa Timur. Pantai ini dikenal sebagai kawasan
+          konservasi penyu yang dikelola oleh masyarakat setempat bersama
+          relawan lingkungan.
+          <br /><br />
+          Suasana yang tenang dan alami menjadikan pantai ini cocok untuk
+          berwisata sambil belajar tentang pelestarian satwa laut. Hamparan
+          pasir keemasan dan udara segar pantai selatan membuat pengalaman di
+          Pantai Taman Kili-Kili semakin berkesan.
+        </p>
+      </section>
+
+      <!-- Jam Buka dan Harga Tiket -->
+      <section
+        class="bg-gradient-to-r from-blue-50 to-sky-50 rounded-2xl shadow-sm border border-blue-100 p-6 md:p-8 mt-8"
+      >
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8">
+          <!-- Jam Buka -->
+          <div
+            class="flex flex-col items-center justify-center bg-white rounded-2xl shadow-md p-5 border border-slate-100 hover:shadow-lg transition"
+          >
+            <div
+              class="w-14 h-14 rounded-full bg-blue-100 flex items-center justify-center mb-4"
+            >
+              <span class="text-2xl">🕒</span>
+            </div>
+            <h3 class="text-lg font-semibold text-blue-700 mb-1">Jam Buka</h3>
+            <p
+              class="text-slate-700 text-center leading-relaxed text-sm sm:text-base"
+            >
+              Setiap Hari<br />
+              <span class="font-medium text-blue-700"
+                >Pukul 06.00 – 17.00 WIB</span
+              >
+            </p>
+          </div>
+
+          <!-- Harga Tiket -->
+          <div
+            class="flex flex-col items-center justify-center bg-white rounded-2xl shadow-md p-5 border border-slate-100 hover:shadow-lg transition"
+          >
+            <div
+              class="w-14 h-14 rounded-full bg-blue-100 flex items-center justify-center mb-4"
+            >
+              <span class="text-2xl">🎟️</span>
+            </div>
+            <h3 class="text-lg font-semibold text-blue-700 mb-1">
+              Harga Tiket Masuk
+            </h3>
+            <ul
+              class="text-slate-700 text-center leading-relaxed space-y-1 text-sm sm:text-base"
+            >
+              <li>
+                <span class="font-medium text-blue-700">Dewasa:</span>
+                Rp5.000/orang
+              </li>
+              <li>
+                <span class="font-medium text-blue-700">Anak-anak:</span>
+                Rp3.000/orang
+              </li>
+              <li>
+                <span class="font-medium text-blue-700">Parkir:</span> Rp3.000
+                (motor), Rp5.000 (mobil)
+              </li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <!-- Aktivitas -->
+      <section id="aktivitas" class="mb-10 mt-10">
+        <h2
+          class="text-2xl font-bold mb-4 text-blue-600 flex items-center gap-2"
+        >
+          🌴 Aktivitas Menarik
+        </h2>
+        <div
+          class="bg-white/80 rounded-2xl shadow-md p-5 border border-slate-100"
+        >
+          <ul
+            class="list-disc list-inside text-slate-700 space-y-3 text-justify text-sm sm:text-base"
+          >
+            <li>
+              <span class="font-medium text-blue-600"
+                >Melepas tukik ke laut:</span
+              >
+              Aktivitas utama di Pantai Taman Kili-Kili yang menarik wisatawan.
+            </li>
+            <li>
+              <span class="font-medium text-blue-600">Berkemah:</span>
+              Nikmati malam di tepi pantai sambil mendengar deburan ombak.
+            </li>
+            <li>
+              <span class="font-medium text-blue-600">Fotografi alam:</span>
+              Banyak spot foto menarik dengan latar pantai dan konservasi penyu.
+            </li>
+            <li>
+              <span class="font-medium text-blue-600"
+                >Menikmati keindahan sunset:</span
+              >
+              Momen matahari terbenam di Pantai Kili-Kili sangat mempesona.
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- Fasilitas -->
+      <section id="fasilitas" class="mb-10">
+        <h2
+          class="text-2xl font-bold mb-4 text-blue-600 flex items-center gap-2"
+        >
+          🏖️ Fasilitas
+        </h2>
+        <div
+          class="bg-white/80 rounded-2xl shadow-md p-5 border border-slate-100"
+        >
+          <ul
+            class="list-disc list-inside text-slate-700 space-y-3 text-justify text-sm sm:text-base"
+          >
+            <li>
+              <span class="font-medium text-blue-600">Area parkir:</span> luas
+              dan dekat dengan bibir pantai.
+            </li>
+            <li>
+              <span class="font-medium text-blue-600"
+                >Toilet & kamar bilas:</span
+              >
+              tersedia di area utama.
+            </li>
+            <li>
+              <span class="font-medium text-blue-600">Warung & gazebo:</span>
+              menyediakan makanan lokal dan tempat bersantai.
+            </li>
+            <li>
+              <span class="font-medium text-blue-600"
+                >Pusat edukasi konservasi penyu:</span
+              >
+              tempat belajar tentang pelestarian penyu laut.
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- Lokasi -->
+      <section id="lokasi" class="mb-10">
+        <h2 class="text-2xl font-bold mb-3 text-blue-600">Lokasi</h2>
+        <p class="text-slate-700 mb-4 text-sm sm:text-base text-justify">
+          Pantai Taman Kili-Kili berada di Desa Wonocoyo, Kecamatan Panggul,
+          Kabupaten Trenggalek, Jawa Timur. Aksesnya sekitar 3 jam perjalanan
+          dari pusat kota Trenggalek melalui jalur Panggul yang berkelok namun
+          indah.
+        </p>
+        <div class="rounded-xl overflow-hidden shadow-md">
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3959.277819318799!2d111.43664687457595!3d-8.194953082613264!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e792dd3c3c26ef3%3A0x3cbbe839c9bba90e!2sPantai%20Taman%20Kili-Kili!5e0!3m2!1sid!2sid!4v1731129999999!5m2!1sid!2sid"
+            width="100%"
+            height="280"
+            style="border: 0"
+            allowfullscreen=""
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+          ></iframe>
+        </div>
+      </section>
+    </main>
+
+    <!-- FOOTER -->
+    <footer
+      class="border-t border-blue-300 mt-10 bg-gradient-to-r from-blue-600 via-blue-500 to-blue-400"
+    >
+      <div
+        class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-6 flex flex-col md:flex-row items-center justify-between text-white text-sm text-center md:text-left gap-2"
+      >
+        <div>
+          © <span id="year"></span> Gelombang Trenggalek • Semua hak dilindungi
+        </div>
+      </div>
+    </footer>
+
+    <script>
+      // Menampilkan tahun saat ini secara otomatis pada elemen dengan id="year"
+      document.getElementById("year").textContent = new Date().getFullYear();
+
+      // Mengambil elemen tombol menu (btnMenu) dan menu mobile (mobileMenu)
+      const btnMenu = document.getElementById("btnMenu");
+      const mobileMenu = document.getElementById("mobileMenu");
+
+      // Menambahkan event listener untuk klik tombol menu
+      btnMenu.addEventListener("click", () => {
+        // Toggle class "hidden" untuk menyembunyikan atau menampilkan menu
+        mobileMenu.classList.toggle("hidden");
+
+        // Tambahkan animasi slide-down setiap kali menu ditampilkan
+        mobileMenu.classList.add("animate-slide-down");
+      });
+    </script>
+  </body>
+</html>
